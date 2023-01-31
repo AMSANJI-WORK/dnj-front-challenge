@@ -9,7 +9,7 @@
   <Transition>
     <div v-if="show" class="flex items-center gap-3 w-full max-w-3xl mx-auto">
       <Me />
-      <form class="w-full md:w-3/5" @submit.prevent="addReply">
+      <form class="w-full pr-4" @submit.prevent="addReply">
         <BaseInputText
           class="outline-gray-300 focus:outline-none"
           v-model="newReply.text"
