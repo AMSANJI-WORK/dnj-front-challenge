@@ -3,7 +3,10 @@
     <Me />
 
     <form @submit.prevent="addDscussion" class="w-full">
-      <InputText v-model="newDiscussion.text" :placeholder="placeholder" />
+      <InputText
+        v-model="newDiscussion.text"
+        placeholder="start a discussion"
+      />
     </form>
   </div>
 </template>
@@ -15,9 +18,7 @@ import Me from "@/modules/app/components/icons/Me.vue";
 import { useDiscussionStore } from "../store";
 import { defaultItem } from "@/modules/discussion/store/mock";
 const discussionStore = useDiscussionStore();
-const props = defineProps({
-  placeholder: { type: String, default: "start a discussion" },
-});
+
 const newDiscussion = reactive({
   ...defaultItem,
   replies: [],
